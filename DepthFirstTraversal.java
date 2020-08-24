@@ -29,6 +29,9 @@ class DepthFirstTraversal {
         	System.out.println();
         	System.out.print("InOrderTraversal: " );
         	bt.inOrderTraversal(root);
+		System.out.println();
+		System.out.print("PostOrderTraversal: ");
+		bt.postOrderTraversal(root);
 	}
 }
 
@@ -64,10 +67,21 @@ class BinaryTree{
         preOrderTraversal(root.left);
         preOrderTraversal(root.right);
     }
+	
+	public void postOrderTraversal(Node root){
+		if(root!=null){
+			postOrderTraversal(root.left);
+		 	postOrderTraversal(root.right);
+			System.out.print(root.value+"  ");
+	 	}
+    	}
+	
+    
 }
 
 
 /* OUTPUT:
 	PreOrderTraversal: 3  6  2  11  9  5  8  13  7  
 	InOrderTraversal: 2  6  9  11  5  3  8  7  13  
+	PostOrderTraversal: 2  9  5  11  6  7  13  8  3  
 */
