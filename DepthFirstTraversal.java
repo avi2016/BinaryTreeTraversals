@@ -1,17 +1,17 @@
 class DepthFirstTraversal {
 	public static void main (String[] args) {
 		
-	Node root = new Node(3);
+		Node root = new Node(3);
 
-	root.left = new Node(6);
-	root.left.left = new Node(2);
-	root.left.right = new Node(11);
-	root.left.right.left = new Node(9);
-	root.left.right.right = new Node(5);
+		root.left = new Node(6);
+		root.left.left = new Node(2);
+		root.left.right = new Node(11);
+		root.left.right.left = new Node(9);
+		root.left.right.right = new Node(5);
 
-	root.right = new Node(8);
-        root.right.right = new Node(13);
-        root.right.right.left = new Node(7);
+		root.right = new Node(8);
+        	root.right.right = new Node(13);
+        	root.right.right.left = new Node(7);
 		
 	/*
                     3
@@ -23,11 +23,12 @@ class DepthFirstTraversal {
                 9   5  7
        */	
         
-        BinaryTree bt = new BinaryTree();
-        bt.preOrderTraversal(root);
-        System.out.println();
-        bt.inOrderTraversal(root);
-        
+        	BinaryTree bt = new BinaryTree();
+        	System.out.print("PreOrderTraversal: "); 
+        	bt.preOrderTraversal(root);
+        	System.out.println();
+        	System.out.print("InOrderTraversal: " );
+        	bt.inOrderTraversal(root);
 	}
 }
 
@@ -64,3 +65,9 @@ class BinaryTree{
         preOrderTraversal(root.right);
     }
 }
+
+
+/* OUTPUT:
+	PreOrderTraversal: 3  6  2  11  9  5  8  13  7  
+	InOrderTraversal: 2  6  9  11  5  3  8  7  13  
+*/
