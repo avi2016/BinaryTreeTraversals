@@ -1,7 +1,7 @@
 import java.util.Queue;
 import java.util.LinkedList;
 
-class DepthFirstTraversal {
+public class LevelOrderTraversal {
 	public static void main (String[] args) {
 		
 		Node root = new Node(3);
@@ -13,8 +13,8 @@ class DepthFirstTraversal {
 		root.left.right.right = new Node(5);
 
 		root.right = new Node(8);
-        root.right.right = new Node(13);
-        root.right.right.left = new Node(7);
+        	root.right.right = new Node(13);
+        	root.right.right.left = new Node(7);
 		
 	/*
                     3
